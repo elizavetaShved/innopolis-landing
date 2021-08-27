@@ -1,23 +1,31 @@
 .news {
   border-top: 1px solid rgba(255, 255, 255, .2);
+  padding: 56px 0 0 0;
 }
 
 .news__cards-wrapper {
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
   margin-bottom: 58px;
-  display: none;
 }
 
-.news__cards-wrapper.mod-show {
-  display: grid;
+@media (max-width: 567px) {
+  .news__cards-wrapper {
+    grid-template-columns: 1fr;
+    margin-bottom: 46px;
+  }
 }
 
 .news__card {
-  display: grid;
+  display: none;
   grid-template-columns: auto 1fr;
   max-width: 430px;
   text-decoration: none;
+}
+
+.news__card.mod-show {
+  display: grid;
 }
 
 .news__card:hover .news__card-content {
@@ -31,10 +39,9 @@
 }
 
 .news__card-date {
-  transform: translateY(50%) rotate(270deg);
+  transform: translate(-20%, 50%) rotate(270deg);
   font-weight: 600;
   font-size: 16px;
-  line-height: 26px;
   color: #9681F2;
   margin-bottom: 42px;
   white-space: nowrap;
@@ -50,6 +57,14 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+@media (max-width: 567px) {
+ .news__card-content {
+   font-size: 14px;
+   line-height: 22px;
+   height: calc(22px * 3);
+ }
 }
 
 .news__card-mark {
@@ -73,7 +88,13 @@
   justify-content: center;
 }
 
-.news__navigate-navigate-btn-wrapper.mod-disabled {
+@media (max-width: 567px) {
+  .news__navigate-navigate-btn-wrapper {
+    padding: 10px;
+  }
+}
+
+.news__navigate-navigate-btn-wrapper:disabled {
   cursor: initial;
 }
 
@@ -81,7 +102,7 @@
   background-image: url('../img/arrow-left-hover.svg');
 }
 
-.news__navigate-navigate-btn-wrapper.mod-prev.mod-disabled .news__navigate-navigate-btn {
+.news__navigate-navigate-btn-wrapper.mod-prev:disabled .news__navigate-navigate-btn {
   background-image: url('../img/arrow-left-disabled.svg');
 }
 
@@ -89,7 +110,7 @@
   background-image: url('../img/arrow-right-hover.svg');
 }
 
-.news__navigate-navigate-btn-wrapper.mod-next.mod-disabled .news__navigate-navigate-btn {
+.news__navigate-navigate-btn-wrapper.mod-next:disabled .news__navigate-navigate-btn {
   background-image: url('../img/arrow-right-disabled.svg');
 }
 
@@ -100,6 +121,13 @@
   background-position: center;
   background-size: contain;
   transition: background-image 200ms;
+}
+
+@media (max-width: 567px) {
+  .news__navigate-navigate-btn {
+    width: 44px;
+    height: 12px;
+  }
 }
 
 .news__navigate-navigate-btn-wrapper.mod-prev .news__navigate-navigate-btn {

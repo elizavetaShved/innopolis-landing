@@ -2,9 +2,10 @@ class newsComponent {
   hostElem;
   btnPrev;
   btnNext;
-  cardWrapperElems;
+  cardElems;
 
   currentSlide = 0;
+  windowIsLarge;
 
   constructor() {
     this.hostElem = document.querySelector('#news-block-host');
@@ -12,42 +13,83 @@ class newsComponent {
 
     this.btnPrev = this.hostElem.querySelector('.news__navigate-navigate-btn-wrapper.mod-prev');
     this.btnNext = this.hostElem.querySelector('.news__navigate-navigate-btn-wrapper.mod-next');
-    this.cardWrapperElems = this.hostElem.querySelectorAll('.news__cards-wrapper');
+    this.cardElems = this.hostElem.querySelectorAll('.news__card');
+    this.windowIsLarge = window.innerWidth > 567;
+
+    this.updateCardsList();
 
     this.btnPrev.onclick = () => {
       if (this.currentSlide > 0) {
-        this.cardWrapperElems[this.currentSlide].classList.remove('mod-show');
         this.currentSlide--;
-        this.cardWrapperElems[this.currentSlide].classList.add('mod-show');
-
-        this.checkDisabledBtns();
+        this.setActiveCard();
       }
     }
 
     this.btnNext.onclick = () => {
-      if (this.currentSlide < this.cardWrapperElems.length - 1) {
-        this.cardWrapperElems[this.currentSlide].classList.remove('mod-show');
-        this.currentSlide++;
-        this.cardWrapperElems[this.currentSlide].classList.add('mod-show');
-
-        this.checkDisabledBtns();
+      if (this.windowIsLarge) {
+        if (this.currentSlide < (this.cardElems.length / 2) - 1) {
+          this.currentSlide++;
+          this.setActiveCard();
+        }
+      } else {
+        if (this.currentSlide < this.cardElems.length - 1) {
+          this.currentSlide++;
+          this.setActiveCard();
+        }
       }
     }
+
+    window.addEventListener('resize', () => {
+      this.updateCardsList();
+    });
+  }
+
+  updateCardsList() {
+    this.windowIsLarge = window.innerWidth > 567;
+    this.setActiveCard();
+  }
+
+  setActiveCard() {
+    if (this.windowIsLarge) {
+      this.cardElems.forEach((card, i) => {
+        if (i === this.currentSlide * 2 || i === this.currentSlide * 2 + 1) {
+          card.classList.add('mod-show');
+        } else {
+          card.classList.remove('mod-show');
+        }
+      })
+    } else {
+      this.cardElems.forEach((card, i) => {
+        if (i === this.currentSlide) {
+          card.classList.add('mod-show');
+        } else {
+          card.classList.remove('mod-show');
+        }
+      })
+    }
+
+    this.checkDisabledBtns();
   }
 
   checkDisabledBtns() {
-    console.log(this.currentSlide)
     if (this.currentSlide === 0) {
-      this.btnPrev.classList.add('mod-disabled');
+      this.btnPrev.setAttribute('disabled', null);
     } else {
-      console.log(111111)
-      this.btnPrev.classList.remove('mod-disabled');
+      this.btnPrev.removeAttribute('disabled');
     }
 
-    if (this.currentSlide === this.cardWrapperElems.length - 1) {
-      this.btnNext.classList.add('mod-disabled');
+    if (this.windowIsLarge) {
+      if (this.currentSlide >= (this.cardElems.length / 2) - 1) {
+        this.btnNext.setAttribute('disabled', null);
+      } else {
+        this.btnNext.removeAttribute('disabled');
+      }
     } else {
-      this.btnNext.classList.remove('mod-disabled');
+      if (this.currentSlide === this.cardElems.length - 1) {
+        this.btnNext.setAttribute('disabled', null);
+      } else {
+        this.btnNext.removeAttribute('disabled');
+      }
     }
   }
 }
