@@ -23,6 +23,16 @@ hr {
   overflow: visible; /* 2 */
 }
 
+ol, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  list-style: none;
+}
+
+
 button {
   cursor: pointer;
   background-color: transparent;
