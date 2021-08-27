@@ -141,10 +141,14 @@
 
 .program__content-item {
   padding: 68px 62px;
-  display: grid;
   grid-template-columns: 1fr 8fr 5fr;
   grid-gap: 40px;
   border-bottom: 1px solid #12152A;
+  display: none;
+}
+
+.program__content-item.mod-show {
+  display: grid;
 }
 
 @media (max-width: 1023px) {
