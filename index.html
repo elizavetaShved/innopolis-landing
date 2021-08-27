@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <title>DID - Форум о цифровой трансофрмации в образовании, бизнесе и госуправлении</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#12152A">
+  <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="image/png" href="favicon.png" rel="icon">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="MobileOptimized" content="320">
+  <meta name="HandheldFriendly" content="True">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/plugins.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/news-block.css">
+
+</head>
+
+<body class="app">
+
+<svg class="main-svg-sprite main-svg-sprite--icons" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <symbol viewBox="0 0 20 20" id="close-icon" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M17.92.083L10 8.003 2.08.082.084 2.081 8.003 10l-7.92 7.919 1.998 1.997L10 11.997l7.92 7.92 1.997-1.998-7.92-7.92 7.92-7.918L17.919.083z"></path>
+  </symbol>
+</svg>
+<svg class="main-svg-sprite main-svg-sprite--colored" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <symbol id="marmelad" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+    <style>.ast6 {
+      fill: #fff
+    }</style>
+    <path fill="#f7e018"
+          d="M272 274.8c-37.5 0-67.9-30.4-67.9-67.9 0-31.4-25.6-57-57-57-37.5 0-67.9-30.4-67.9-67.9s30.4-67.9 67.9-67.9c106.3 0 192.8 86.5 192.8 192.8 0 37.5-30.4 67.9-67.9 67.9z"></path>
+    <path fill="#1988c6"
+          d="M243.8 394.9c0-37.5 30.4-67.9 67.9-67.9 31.4 0 57-25.6 57-57 0-37.5 30.4-67.9 67.9-67.9s67.9 30.4 67.9 67.9c0 106.3-86.5 192.8-192.8 192.8-37.5 0-67.9-30.4-67.9-67.9z"></path>
+    <path fill="#f16524"
+          d="M133.5 200.3c31.3 20.7 39.9 62.8 19.2 94.1-17.3 26.2-10.1 61.6 16.1 79 31.3 20.7 39.9 62.8 19.2 94.1s-62.8 39.9-94.1 19.2C5.2 427.9-19.2 308.1 39.4 219.5c20.7-31.3 62.8-39.9 94.1-19.2z"></path>
+    <path fill="#e5cd1a"
+          d="M234.1 206.9c0-31.4-25.6-57-57-57-37.5 0-67.9-30.4-67.9-67.9 0-33.7 24.5-61.7 56.7-67-6.2-.6-12.5-.9-18.8-.9-37.5 0-67.9 30.4-67.9 67.9s30.4 67.9 67.9 67.9c31.4 0 57 25.6 57 57 0 37.5 30.4 67.9 67.9 67.9 5.2 0 10.2-.6 15-1.7-30.3-6.8-52.9-33.8-52.9-66.2z"></path>
+    <path fill="#1c73ba"
+          d="M273.8 394.9c0-37.5 30.4-67.9 67.9-67.9 31.4 0 57-25.6 57-57 0-32.3 22.6-59.4 52.9-66.2-4.8-1.1-9.8-1.7-15-1.7-37.5 0-67.9 30.4-67.9 67.9 0 31.4-25.6 57-57 57-37.5 0-67.9 30.4-67.9 67.9s30.4 67.9 67.9 67.9c6.4 0 12.6-.3 18.8-.9-32.1-5.3-56.7-33.3-56.7-67z"></path>
+    <path fill="#e54c21"
+          d="M123.9 486.6C35.2 427.9 10.8 308.1 69.4 219.5c10.1-15.2 25.2-25.1 41.7-28.8-26.8-6.1-55.7 4.5-71.7 28.8C-19.2 308.2 5.2 428 93.9 486.6c16.1 10.6 35 13.5 52.4 9.6-7.8-1.8-15.4-5-22.4-9.6z"></path>
+    <path
+      d="M347.4 206.9c0-110.4-89.8-200.3-200.3-200.3-41.6 0-75.4 33.8-75.4 75.4s33.8 75.4 75.4 75.4c27.3 0 49.5 22.2 49.5 49.5 0 41.6 33.8 75.4 75.4 75.4 41.6 0 75.4-33.8 75.4-75.4zm-135.8 0c0-35.6-28.9-64.5-64.5-64.5-33.3 0-60.4-27.1-60.4-60.4s27.1-60.4 60.4-60.4c102.2 0 185.3 83.1 185.3 185.3 0 33.3-27.1 60.4-60.4 60.4s-60.4-27.1-60.4-60.4z"></path>
+    <path
+      d="M120.7 82h-15c0 22.9 18.6 41.4 41.4 41.4 17.7 0 34.7 5.5 49 15.9l8.8-12.1c-16.9-12.3-36.9-18.8-57.8-18.8-14.5.1-26.4-11.8-26.4-26.4zm186.7 80.2c-12.8-45.8-44.8-84.1-87.7-105l-6.6 13.5c39.1 19 68.2 53.8 79.8 95.5l14.5-4zM190.9 62.1c4.5 1.4 9.1 3 13.5 4.8l5.7-13.9c-4.8-2-9.8-3.8-14.8-5.3l-4.4 14.4zM185.2 45c-5.1-1.2-10.3-2.2-15.5-2.9l-2 14.9c4.7.6 9.4 1.5 14.1 2.6l3.4-14.6z"
+      class="ast6"></path>
+    <path
+      d="M436.6 194.7c-41.6 0-75.4 33.8-75.4 75.4 0 27.3-22.2 49.5-49.5 49.5-41.6 0-75.4 33.8-75.4 75.4s33.8 75.4 75.4 75.4c110.4 0 200.3-89.8 200.3-200.3 0-41.6-33.8-75.4-75.4-75.4zM311.7 455.3c-33.3 0-60.4-27.1-60.4-60.4s27.1-60.4 60.4-60.4c35.6 0 64.5-28.9 64.5-64.5 0-33.3 27.1-60.4 60.4-60.4S497 236.7 497 270c0 102.2-83.1 185.3-185.3 185.3z"></path>
+    <path
+      d="M407.5 312.4l14.1 5.1c1.8-5.1 3.3-10.3 4.3-15.6l-14.7-2.8c-.9 4.6-2.1 9-3.7 13.3zm-10.7 20.3l12.2 8.7c3.1-4.4 5.9-9.1 8.3-13.9l-13.4-6.6c-2 4.1-4.4 8-7.1 11.8z"></path>
+    <path
+      d="M363.3 326.9c-14.2 12.9-32.5 19.9-51.6 19.9-26.5 0-48.1 21.6-48.1 48.1h15c0-18.2 14.8-33.1 33.1-33.1 22.8 0 44.7-8.5 61.6-23.8l-10-11.1z"
+      class="ast6"></path>
+    <path
+      d="M365.6 418.5l5.1 14.1c4.9-1.8 9.8-3.8 14.5-6l-6.4-13.6c-4.3 2.1-8.7 3.9-13.2 5.5zm-22.9 6.4l2.9 14.7c5.1-1 10.2-2.3 15.2-3.8l-4.3-14.4c-4.5 1.5-9.2 2.6-13.8 3.5zm-23.7 2.9l.7 15c5.2-.2 10.5-.7 15.6-1.4l-2-14.9c-4.8.7-9.5 1.1-14.3 1.3z"></path>
+    <path
+      d="M481.9 254.1l-14.1 5c1.2 3.5 1.9 7.2 1.9 11 0 32.2-9.7 63.3-28 89.7l12.3 8.5c20.1-29 30.7-63 30.7-98.3 0-5.4-1-10.8-2.8-15.9zM454 225.3c-5.5-2.2-11.4-3.3-17.4-3.3v15c4.1 0 8.1.8 11.9 2.2l5.5-13.9zm10.2 26.5l12.5-8.3c-3.3-5-7.4-9.2-12.3-12.7l-8.7 12.2c3.4 2.5 6.2 5.4 8.5 8.8z"
+      class="ast6"></path>
+    <path
+      d="M172.9 367c-22.8-15-29-45.8-14-68.6 11.1-16.8 15-36.9 11-56.6-4-19.7-15.5-36.7-32.3-47.8-16.8-11.1-36.9-15-56.6-11-19.7 4-36.7 15.5-47.8 32.3-60.9 92.1-35.5 216.6 56.6 277.5 12.5 8.3 26.8 12.5 41.4 12.5 5.1 0 10.2-.5 15.2-1.5 19.7-4 36.7-15.5 47.8-32.3s15-36.9 11-56.6c-4-19.8-15.5-36.8-32.3-47.9zm8.8 96.2c-8.9 13.5-22.5 22.6-38.3 25.9-15.8 3.2-31.9.1-45.4-8.8C12.8 424-10.7 308.8 45.7 223.6c8.9-13.5 22.5-22.6 38.3-25.9 4.1-.8 8.1-1.2 12.2-1.2 11.7 0 23.2 3.4 33.2 10 13.5 8.9 22.6 22.5 25.9 38.3 3.2 15.8.1 31.9-8.8 45.4-19.6 29.7-11.4 69.7 18.2 89.4 13.5 8.9 22.6 22.5 25.9 38.3 3.1 15.8 0 31.9-8.9 45.3z"></path>
+    <path
+      d="M116.8 452C100.1 441 86 427.1 75 410.8l-12.4 8.4c12.2 18 27.6 33.2 45.9 45.3 6.9 4.5 14.7 6.9 22.8 6.9 2.8 0 5.6-.3 8.4-.9l-3-14.7c-7 1.5-14.1.1-19.9-3.8zm5.1-200.4c.4 1.8.5 3.6.5 5.4 0 5.1-1.5 10.2-4.4 14.5-10.7 16.2-16.3 34.8-16.3 54.1 0 6.6.7 13.3 2 19.9l14.7-3c-1.1-5.6-1.7-11.3-1.7-16.9 0-16.3 4.8-32.1 13.8-45.8 4.5-6.8 6.9-14.7 6.9-22.8 0-2.8-.3-5.6-.8-8.4-.3-1.3-.6-2.6-1-3.9l-14.3 4.4c.3.8.5 1.7.6 2.5zm-3.9-9.5l12.4-8.4c-3-4.5-6.9-8.3-11.5-11.4-.6-.4-1.1-.7-1.7-1.1l-7.7 12.9c.4.2.7.5 1.1.7 3 2 5.4 4.4 7.4 7.3zm-15.7-10.9l3.6-14.6c-5.9-1.5-12.1-1.6-18.2-.3l3 14.7c3.9-.8 7.9-.7 11.6.2z"
+      class="ast6"></path>
+  </symbol>
+</svg>
+
+
+<div class="app__wrapper">
+  <header class="app-header">
+    <div class="app-header__inner">
+      <div class="app-header__left">
+        <button class="app-header__burger"></button>
+        <div class="app-header__logo">
+          <img src="img/logo.svg" alt="">
+        </div>
+      </div>
+      <div class="app-header__middle">
+        <div class="app-header__contacts">
+
+          <div class="app-header__mail">
+            <a href="mailto:did@innopolis.ru">did@innopolis.ru</a>
+          </div>
+        </div>
+        <div class="app-header__dop-logo">
+          <img src="img/logo2.svg" alt="">
+        </div>
+      </div>
+
+    </div>
+  </header><!-- b:app-header -->
+
+
+  <div class="app__content">
+
+    <main class="app__main">
+
+      <div class="desctop-navigation">
+        <div class="desctop-navigation__navigation">
+          <ul>
+
+            <li>
+              <a href="#block2" class="navigation-link">Основные треки</a>
+            </li>
+
+            <li>
+              <a href="#block4" class="navigation-link">О форуме</a>
+            </li>
+
+            <li>
+              <a href="#block6" class="navigation-link">Билеты</a>
+            </li>
+
+            <li>
+              <a href="#block7" class="navigation-link">Партнеры</a>
+            </li>
+
+            <li>
+              <a href="#block8" class="navigation-link">Контакты</a>
+            </li>
+
+          </ul>
+        </div>
+      </div><!-- desctop-navigation -->
+
+      <div class="hero-block">
+        <div class="hero-block__inner site-width">
+          <div class="hero-block__head">
+            <div class="hero-block__image">
+              <img src="img/hero-image.svg" alt="">
+            </div>
+            <div class="hero-block__description">Форум о цифровой трансофрмации в образовании, бизнесе и госуправлении
+            </div>
+          </div>
+          <div class="hero-block__body">
+            <div class="hero-block__information">
+              <div class="hero-block__information-item">
+                <span>когда</span>
+                2—4 декабря
+              </div>
+              <div class="hero-block__information-item">
+                <span>где</span>
+                Иннополис
+              </div>
+            </div>
+            <div class="hero-block__button">
+              <a href="#" class="site-btn site-btn--1" data-remodal-target="sign_up">Участвовать</a>
+            </div>
+          </div>
+        </div>
+      </div><!-- hero-block -->
+
+      <div class="news" id="news-block-host">
+        <div class="site-width">
+          <div class="news__cards-wrapper mod-show">
+            <a href="#" class="news__card">
+              <div class="news__card-date">
+                12 июля
+              </div>
+              <div class="news__card-content">
+                Фонд Росконгресс вошел в состав Организационного комитета международной премии
+                <span class="news__card-mark">#МыВместе</span>
+              </div>
+            </a>
+            <a href="#" class="news__card">
+              <div class="news__card-date">
+                12 июля
+              </div>
+              <div class="news__card-content">
+                Фонд Росконгресс вошел в состав Организационного комитета международной премии
+                <span class="news__card-mark">#МыВместе</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="news__cards-wrapper">
+            <a href="#" class="news__card">
+              <div class="news__card-date">
+                14 июля
+              </div>
+              <div class="news__card-content">
+                Короткая новость
+              </div>
+            </a>
+            <a href="#" class="news__card">
+              <div class="news__card-date">
+                15 июля
+              </div>
+              <div class="news__card-content">
+                Очень длинная новость Очень длинная новость Очень sfsdfsdf длинная новость Очень длинная новость Очень
+                длинная
+                новость sdfsdfsdf Очень длинная новость sdssdfsdf длинная новость Очень длинная новость Очень длинная
+              </div>
+            </a>
+          </div>
+
+          <div class="news__cards-wrapper">
+            <a href="#" class="news__card">
+              <div class="news__card-date">
+                12 июля
+              </div>
+              <div class="news__card-content">
+                Фонд Росконгресс вошел в состав Организационного комитета международной премии
+                <span class="news__card-mark">#МыВместе</span>
+              </div>
+            </a>
+            <a href="#" class="news__card">
+              <div class="news__card-date">
+                12 июля
+              </div>
+              <div class="news__card-content">
+                Фонд Росконгресс вошел в состав Организационного комитета международной премии
+                <span class="news__card-mark">#МыВместе</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="news__navigate-panel">
+            <div class="hero-block__button">
+              <button type="button" class="site-btn mod-small site-btn--1">Все новости</button>
+            </div>
+
+            <div class="news__navigate-navigate-btns-wrapper">
+              <button class="news__navigate-navigate-btn-wrapper mod-prev mod-disabled">
+                <span class="news__navigate-navigate-btn"></span>
+              </button>
+              <button class="news__navigate-navigate-btn-wrapper mod-next">
+                <span class="news__navigate-navigate-btn"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="block2" class="faq-block">
+        <div class="faq-block__inner site-width">
+          <div class="faq-block__title h1">Основные треки</div>
+          <div class="faq-block__list">
+            <div class="faq-block__item">
+              <span class="faq-block__item-icon"></span>
+              <div class="faq-block__item-title">Цифровые технологии в приоритетных отраслях экономики и социальной
+                сферы
+              </div>
+              <div class="faq-block__item-body">
+                <ul>
+                  <li>Скорость изменения рынка и влияние на ключевых игроков</li>
+                  <li>Выстраивание эффективного сотрудничества между бизнесом, наукой и образовательными организациями
+                  </li>
+                  <li>Особенности подготовки квалифицированных кадров для индустрии</li>
+                </ul>
+              </div>
+            </div>
+            <div class="faq-block__item">
+              <span class="faq-block__item-icon"></span>
+              <div class="faq-block__item-title">Экспортный потенциал российских цифровых технологий</div>
+              <div class="faq-block__item-body">
+                <ul>
+                  <li>Деловой климат, конкуренция и сдерживающие факторы</li>
+                  <li>Экспортный потенциал технологий и отток российских ИТ-специалистов</li>
+                  <li>Законодательные и регуляторные нововведения</li>
+                  <li>Кейсы по разработке и внедрению стратегий цифровой трансформации в компаниях с госучастием</li>
+                </ul>
+
+              </div>
+            </div>
+            <div class="faq-block__item">
+              <span class="faq-block__item-icon"></span>
+              <div class="faq-block__item-title">Цифровая трансформация регионов</div>
+              <div class="faq-block__item-body">
+                <ul>
+                  <li>Цифровизации регионов и развитие цифровой экономики</li>
+                  <li>Международная и российская практика социально-экономического развития регионов</li>
+                </ul>
+              </div>
+            </div>
+            <div class="faq-block__item">
+              <span class="faq-block__item-icon"></span>
+              <div class="faq-block__item-title">Кадры для индустрии</div>
+              <div class="faq-block__item-body">
+                <ul>
+                  <li>Международная и российская практика социально-экономического развития регионов</li>
+                  <li>Современные вузы как центры дополнительного профессионального образования и экспертные хабы для
+                    бизнеса
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+            <div class="faq-block__item">
+              <span class="faq-block__item-icon"></span>
+              <div class="faq-block__item-title">Цифровой суверенитет и кибербезопасность (практика)</div>
+              <div class="faq-block__item-body">
+                <ul>
+                  <li>Отработка навыков защиты от компьютерных атак и правила реагирования на инциденты</li>
+                  <li>Симуляция распространенных сценариев кибератак и их расследования</li>
+                  <li>Практика оценки рисков и пошаговые инструкции для защиты организации</li>
+                </ul>
+              </div>
+            </div>
+            <div class="faq-block__item">
+              <span class="faq-block__item-icon"></span>
+              <div class="faq-block__item-title">Цифровая трансформация вузов</div>
+              <div class="faq-block__item-body">
+                <ul>
+                  <li>Новое видение высшей школы в условиях глобальной цифровизации</li>
+                  <li>Мировые тренды и инновационные подходы в обучении поколения Z</li>
+                  <li>Оптимальные модели цифровой трансформации вузов</li>
+                  <li>Обмен опытом: лучшие практики, методическая поддержка, нормативно-правовые барьеры</li>
+                </ul>
+              </div>
+            </div>
+            <div class="faq-block__item">
+              <span class="faq-block__item-icon"></span>
+              <div class="faq-block__item-title">Развитие Опорного образовательного и Единого учебно-методологического
+                центров
+              </div>
+              <div class="faq-block__item-body">
+                <ul>
+                  <li>Результаты работы ООЦ и ЕМЦ Университета Иннополис за 2021 год</li>
+                  <li>Исследование готовности высшего и среднего профессионального образования к цифровой трансформации
+                    и аналитика успешных кейсов
+                  </li>
+                  <li>Награждение лучших образовательных организации и преподавателей</li>
+                </ul>
+              </div>
+            </div>
+            <div class="faq-block__item">
+              <span class="faq-block__item-icon"></span>
+              <div class="faq-block__item-title">Startup House: трехдневный интенсив для технологических стартапов из
+                вузов партнерской сети ООЦ
+              </div>
+              <div class="faq-block__item-body">
+                <ul>
+                  <li>Выстраивание эффективной коммуникации с представителями ИТ-индустрии</li>
+                  <li>Маркетинг и первые продажи</li>
+                  <li>Правила питчинга: воркшопы по ораторскому мастерству и сторителлингу</li>
+                  <li>Питч-сессия стартапов перед инвесторами</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- faq-block -->
+
+      <div id="block4" class="about-block">
+        <div class="about-block__inner site-width">
+          <h1 class="about-block__title">О форуме</h1>
+          <div class="about-block__description">Digital Innopolis Days объединяет главных драйверов цифровой
+            трансформации страны: отраслевые компании и корпорации, ИТ-компании, профильные и педагогические вузы и
+            органы государственной власти всех уровней.
+          </div>
+          <div class="about-block__image">
+            <img src="img/image1.jpg" alt="">
+          </div>
+          <p>На площадках форума ведущие российские и международные спикеры поделятся опытом и индустриальными
+            практиками. Участники DID познакомятся с новыми образовательными форматами и продуктами инновационного
+            мышления.</p>
+          <p>Организатор форума <a href="#">Университет Иннополис</a> — российский вуз, специализирующийся на
+            образовании, разработках и исследованиях в области информационных технологий и робототехники. В 2020 году на
+            базе Университета Иннополис создана единая <a href="#">площадка</a> для повышения квалификации
+            преподавателей высшего и среднего профессионального образования России — Опорный образовательный и Единый
+            методологический центр по направлениям цифровой экономики. </p>
+        </div>
+      </div><!-- about-block -->
+
+
+      <div id="block6" class="tickets-block">
+        <div class="tickets-block__inner site-width">
+          <div class="tickets-block__title h1">Билеты</div>
+          <div class="tickets-block__list">
+            <div class="tickets-block__item">
+              <div class="tickets-thumbs">
+                <div class="tickets-thumbs__top">
+                  <div class="tickets-thumbs__term">3 дня</div>
+                  <div class="tickets-thumbs__date">2 декабря</div>
+                  <div class="tickets-thumbs__price">10 000 ₽</div>
+                </div>
+                <div class="tickets-thumbs__timer">
+                  <div class="tickets-thumbs__timer-title">до окрытия продаж осталось</div><!-- e:timer-title -->
+                  <div class="tickets-thumbs__timer-body site-countdown" data-end-time="2021/09/01">
+							<span class="day">
+								<span class="time-body"></span>
+								<span class="time-name">дней</span>
+							</span>
+                    <span class="hourts">
+								<span class="time-body"></span>
+								<span class="time-name">часов</span>
+							</span>
+                    <span class="minutes">
+								<span class="time-body"></span>
+								<span class="time-name">минут</span>
+							</span>
+                  </div><!-- <= timer-body -->
+                </div><!-- <= timer -->
+              </div><!-- tickets-thumbs -->
+            </div>
+
+          </div>
+        </div>
+      </div><!-- tickets-block -->
+
+
+      <div id="block7" class="partners-block">
+        <div class="partners-block__section site-width">
+          <div class="partners-block__inner">
+            <div class="partners-block__head">
+              <h2 class="partners-block__title h2">Партнеры</h2>
+              <button class="partners-block__btn-sign-up site-btn site-btn--1" data-remodal-target="partners"
+                      type="button">Стать партнером
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div><!-- partners-block -->
+
+      <div class="sign-up-block">
+        <div class="sign-up-block__section">
+          <div class="sign-up-block__inner">
+            <div class="sign-up-block__content site-width">
+              <h2 class="sign-up-block__title h2">Стать участником</h2>
+              <button class="sign-up-block__btn-sign-up site-btn site-btn--1" data-remodal-target="sign_up"
+                      type="button">Зарегистрироваться
+              </button>
+            </div>
+          </div>
+        </div>
+      </div><!-- sign-up-block -->
+      <div id="block8" class="contacts-block">
+        <div class="contacts-block__section">
+          <div class="contacts-block__inner site-width">
+            <h2 class="contacts-block__title h2">Контакты</h2>
+            <div class="contacts-block__content">
+              <div class="contacts-block__address">
+                <div class="contacts-block__name">место проведения</div>
+                <div class="contacts-block__info">
+                  Университетская ул., 1, Иннополис, Россия
+                </div>
+              </div>
+              <div class="contacts-block__email">
+                <div class="contacts-block__name">электронная почта</div>
+                <a href="mailto:did@innopolis.ru" class="contacts-block__info">did@innopolis.ru</a>
+              </div>
+
+            </div>
+            <form class="contacts-block__form-subscribe">
+              <div class="contacts-block__name">подписаться на рассылку новостей</div>
+              <div class="contacts-block__group">
+                <div class="contacts-block__input">
+                  <input type="email" placeholder="Электронная почта">
+                </div>
+                <button class="contacts-block__btn-subscribe site-btn site-btn--1">Подписаться</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="map-block">
+          <div class="map-block__map active" data-center="48.743261, 55.753681" data-zoom="17"
+               data-address="Университетская ул., 1, Иннополис, Россия"
+               data-dopadress="[{&quot;coordinates&quot;: &quot;55.753681,48.743261&quot;}]">
+          </div>
+        </div><!-- map-block -->
+        <script async=""
+                src="https://api-maps.yandex.ru/2.1/?apikey=5fa6f5ee-c55e-4f35-a5b3-c67b3c581d82&lang=ru_RU"></script>
+
+      </div><!-- contacts-block -->
+
+
+    </main><!-- app__main -->
+
+
+  </div><!-- app__content -->
+
+
+  <footer class="app-footer">
+    <div class="app-footer__section site-width">
+      <div class="app-footer__inner">
+        <div class="app-footer__site-copy">
+          &copy; Digital Innopolis Days
+        </div>
+        <div class="app-footer__policy-links">
+          <a href="#">Пользовательское соглашения и Договор оказания услуг</a>
+          <a href="#">Договор оказания услуг</a>
+          <a href="#">Политика возвратов</a>
+        </div>
+      </div>
+    </div>
+  </footer><!-- app-footer -->
+
+
+</div><!-- app__wrapper -->
+
+<div class="mobile-box">
+  <div class="mobile-box__inner">
+    <div class="mobile-box__navigation">
+      <ul>
+
+        <li>
+          <a href="#block2" class="navigation-link">Основные треки</a>
+        </li>
+
+        <li>
+          <a href="#block4" class="navigation-link">О форуме</a>
+        </li>
+
+        <li>
+          <a href="#block6" class="navigation-link">Билеты</a>
+        </li>
+
+        <li>
+          <a href="#block7" class="navigation-link">Партнеры</a>
+        </li>
+
+        <li>
+          <a href="#block8" class="navigation-link">Контакты</a>
+        </li>
+
+      </ul>
+    </div>
+    <div class="mobile-box__bottom">
+      <div class="mobile-box__contacts">
+
+        <div class="mobile-box__mail">
+          <a href="mailto:did@innopolis.ru">did@innopolis.ru</a>
+        </div>
+      </div>
+      <div class="mobile-box__dop-logo">
+        <img src="img/logo2.svg" alt="">
+      </div>
+    </div>
+  </div>
+</div><!-- mobile-box -->
+
+
+<div class="popup-form remodal" data-remodal-id="sign_up">
+  <button class="popup-form__btn-close remodal-close" data-remodal-action="close" type="button"></button>
+  <div class="popup-form__section">
+    <form class="popup-form__form">
+      <div class="popup-form__title">
+        Отправить заявку
+        на участие
+      </div>
+      <div class="popup-form__groups">
+        <div class="popup-form__group">
+          <div class="popup-form__name">ФИО</div>
+          <div class="popup-form__input">
+            <input type="text" placeholder="Иванов Анатолий Иванович">
+          </div>
+        </div>
+        <div class="popup-form__group">
+          <div class="popup-form__name">Организация</div>
+          <div class="popup-form__input">
+            <input type="text" placeholder="Какую организацию Вы представляете?">
+          </div>
+        </div>
+        <div class="popup-form__group">
+          <div class="popup-form__name">E-mail</div>
+          <div class="popup-form__input">
+            <input type="email" placeholder="info@gmail.com">
+          </div>
+        </div>
+        <div class="popup-form__group">
+          <div class="popup-form__name">Телефон</div>
+          <div class="popup-form__input">
+            <input type="tel" placeholder="+7">
+          </div>
+        </div>
+      </div>
+      <div class="popup-form__bottom">
+        <div class="popup-form__warning">
+          <i></i>
+          <span>
+                        Заполните все обязательные поля
+                    </span>
+        </div>
+        <div class="popup-form__user-agreement">
+          <label class="popup-form__label">
+            <input type="checkbox" checked="">
+            <span>
+                            Я подтверждаю свое согласие с условиями <a href="#">Пользовательского соглашения</a> и <a
+              href="#">Договором оказания услуг</a> по организации
+                            мероприятия и <a href="#">политикой возвратов</a>
+                        </span>
+          </label>
+        </div>
+        <button class="popup-form__btn-send site-btn site-btn--1" type="submit">отправить</button>
+      </div>
+    </form>
+  </div>
+  <div class="popup-success">
+    <div class="popup-success__section">
+      <div class="popup-success__desc">
+        <strong>Спасибо! Вышлем подтверждение на электронку</strong>
+      </div>
+    </div>
+  </div><!-- b:popup-success -->
+</div><!-- popup-form -->
+<div class="popup-form remodal" data-remodal-id="partners">
+  <button class="popup-form__btn-close remodal-close" data-remodal-action="close" type="button"></button>
+  <div class="popup-form__section">
+    <form class="popup-form__form">
+      <div class="popup-form__title">
+        Стать партнером
+      </div>
+      <div class="popup-form__groups">
+        <div class="popup-form__group">
+          <div class="popup-form__name">ФИО</div>
+          <div class="popup-form__input">
+            <input type="text" placeholder="Иванов Анатолий Иванович">
+          </div>
+        </div>
+        <div class="popup-form__group">
+          <div class="popup-form__name">Организация</div>
+          <div class="popup-form__input">
+            <input type="text" placeholder="Какую организацию Вы представляете?">
+          </div>
+        </div>
+        <div class="popup-form__group">
+          <div class="popup-form__name">E-mail</div>
+          <div class="popup-form__input">
+            <input type="email" placeholder="info@gmail.com">
+          </div>
+        </div>
+        <div class="popup-form__group">
+          <div class="popup-form__name">Телефон</div>
+          <div class="popup-form__input">
+            <input type="tel" placeholder="+7">
+          </div>
+        </div>
+      </div>
+      <div class="popup-form__bottom">
+        <div class="popup-form__warning">
+          <i></i>
+          <span>
+                        Заполните все обязательные поля
+                    </span>
+        </div>
+        <div class="popup-form__user-agreement">
+          <label class="popup-form__label">
+            <input type="checkbox" checked="">
+            <span>
+                            Я подтверждаю свое согласие с условиями <a href="#">Пользовательского соглашения</a> и <a
+              href="#">Договором оказания услуг</a> по организации
+                            мероприятия и <a href="#">политикой возвратов</a>
+                        </span>
+          </label>
+        </div>
+        <button class="popup-form__btn-send site-btn site-btn--1" type="submit">отправить</button>
+      </div>
+    </form>
+  </div>
+  <div class="popup-success">
+    <div class="popup-success__section">
+      <div class="popup-success__desc">
+        <strong>Спасибо! Вышлем подтверждение на электронку</strong>
+      </div>
+    </div>
+  </div><!-- b:popup-success -->
+</div><!-- popup-form -->
+
+<script src="js/vendors/jquery-3.4.1.min.js"></script>
+<script src="js/plugins.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/news-component.js"></script>
+
+</body><!-- app -->
+</html>
