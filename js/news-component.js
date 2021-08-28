@@ -93,7 +93,3 @@ class newsComponent {
     }
   }
 }
-
-window.onload = () => {
-  new newsComponent();
-}

@@ -20,7 +20,3 @@ class speakersComponent {
     })
   }
 }
-
-window.onload = () => {
-  new speakersComponent();
-}
