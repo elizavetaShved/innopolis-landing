@@ -349,25 +349,58 @@
       <div class="program" id="program-host">
         <div class="program__top-block-wrapper">
           <div class="site-width">
-            <div class="program__head">
-              <h2 class="program__title h1">Программа</h2>
+            <form id="program-form">
+              <div class="program__head">
+                <h2 class="program__title h1">Программа</h2>
 
-              <div class="program__navigate-wrapper">
-                <button type="button" class="program__navigate-btn mod-active">2 декабря</button>
-                <button type="button" class="program__navigate-btn">3 декабря</button>
-                <button type="button" class="program__navigate-btn">4 декабря</button>
+                <div class="program__navigate-wrapper">
+                  <label class="program__navigate-radio-wrapper">
+                    <input type="radio" class="program__navigate-radio" name="program-date" checked>
+                    <span class="program__navigate-radio-content">
+                      2 декабря
+                    </span>
+                  </label>
+                  <label class="program__navigate-radio-wrapper">
+                    <input type="radio" class="program__navigate-radio" name="program-date">
+                    <span class="program__navigate-radio-content">
+                      3 декабря
+                    </span>
+                  </label>
+                  <label class="program__navigate-radio-wrapper">
+                    <input type="radio" class="program__navigate-radio" name="program-date">
+                    <span class="program__navigate-radio-content">
+                      4 декабря
+                    </span>
+                  </label>
+                </div>
               </div>
-            </div>
 
-            <div class="program__filters-wrapper-caption">фильтры</div>
+              <div class="program__filters-wrapper-caption">фильтры</div>
 
-            <div class="program__filters-wrapper">
-              <button type="button" class="program__filter-btn mod-active" value="type-business">Бизнес</button>
-              <button type="button" class="program__filter-btn" value="type-government">Органы гос. власти</button>
-              <button type="button" class="program__filter-btn" value="type-universities">Вузы</button>
-              <button type="button" class="program__filter-btn" value="type-cultural">Культурная программа</button>
-              <button type="button" class="program__filter-btn" value="startups">Стартапы</button>
-            </div>
+              <div class="program__filters-wrapper">
+                <label class="program__filter-checkbox-wrapper">
+                  <input type="checkbox" class="program__filter-checkbox" value="type-business" name="program-filter">
+                  <span class="program__filter-checkbox-content">Бизнес</span>
+                </label>
+                <label class="program__filter-checkbox-wrapper">
+                  <input type="checkbox" class="program__filter-checkbox" value="type-government" name="program-filter">
+                  <span class="program__filter-checkbox-content">Органы гос. власти</span>
+                </label>
+                <label class="program__filter-checkbox-wrapper">
+                  <input type="checkbox" class="program__filter-checkbox" value="type-universities"
+                         name="program-filter">
+                  <span class="program__filter-checkbox-content">Вузы</span>
+                </label>
+                <label class="program__filter-checkbox-wrapper">
+                  <input type="checkbox" class="program__filter-checkbox" value="type-cultural" name="program-filter">
+                  <span class="program__filter-checkbox-content">Культурная программа</span>
+                </label>
+                <label class="program__filter-checkbox-wrapper">
+                  <input type="checkbox" class="program__filter-checkbox" value="startups" name="program-filter">
+                  <span class="program__filter-checkbox-content">Стартапы</span>
+                </label>
+              </div>
+            </form>
           </div>
         </div>
 
@@ -375,7 +408,7 @@
           <div class="site-width program__site-width-none">
             <ul class="program__content-wrapper">
               1
-              <li class="program__content-item type-business mod-show">
+              <li class="program__content-item type-business">
                 <div class="program__content-item-time-wrapper">
                   <div class="program__content-item-time">
                     12:00
@@ -433,7 +466,8 @@
                 </div>
                 <div class="program__content-info">
                   <div class="program__content-info-tile">
-                    (Органы гос. власти) Российские цифровые технологии: экспортный потенциал российской цифровой индустрии
+                    (Органы гос. власти) Российские цифровые технологии: экспортный потенциал российской цифровой
+                    индустрии
                   </div>
                   <ul class="program__content-info-list">
                     <li class="program__content-info-item">
@@ -682,7 +716,7 @@
           <div class="site-width program__site-width-none">
             <ul class="program__content-wrapper">
               2
-              <li class="program__content-item type-business mod-show">
+              <li class="program__content-item type-business">
                 <div class="program__content-item-time-wrapper">
                   <div class="program__content-item-time">
                     12:00
@@ -740,7 +774,8 @@
                 </div>
                 <div class="program__content-info">
                   <div class="program__content-info-tile">
-                    (Органы гос. власти) Российские цифровые технологии: экспортный потенциал российской цифровой индустрии
+                    (Органы гос. власти) Российские цифровые технологии: экспортный потенциал российской цифровой
+                    индустрии
                   </div>
                   <ul class="program__content-info-list">
                     <li class="program__content-info-item">
@@ -989,7 +1024,7 @@
           <div class="site-width program__site-width-none">
             <ul class="program__content-wrapper">
               3
-              <li class="program__content-item type-business mod-show">
+              <li class="program__content-item type-business">
                 <div class="program__content-item-time-wrapper">
                   <div class="program__content-item-time">
                     12:00
@@ -1047,7 +1082,8 @@
                 </div>
                 <div class="program__content-info">
                   <div class="program__content-info-tile">
-                    (Органы гос. власти) Российские цифровые технологии: экспортный потенциал российской цифровой индустрии
+                    (Органы гос. власти) Российские цифровые технологии: экспортный потенциал российской цифровой
+                    индустрии
                   </div>
                   <ul class="program__content-info-list">
                     <li class="program__content-info-item">

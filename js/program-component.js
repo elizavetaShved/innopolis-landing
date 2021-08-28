@@ -1,16 +1,18 @@
 class programComponent {
   constructor() {
-    const hostElem = document.querySelector('#program-host');
+    const hostElem = document.getElementById('program-host');
     if (!hostElem) return;
     const btsOpenDescription = hostElem.querySelectorAll('.program__content-info-btn-show');
     const descriptionElems = hostElem.querySelectorAll('.program__content-info-list');
 
-    const btnsNavigate = hostElem.querySelectorAll('.program__navigate-btn');
+    const radioDateElems = hostElem.querySelectorAll('.program__navigate-radio');
     const contentBlockElems = hostElem.querySelectorAll('.program__bottom-block-wrapper');
 
-    const btnsFilter = hostElem.querySelectorAll('.program__filter-btn');
+    const checkboxFilterElems = hostElem.querySelectorAll('.program__filter-checkbox');
 
-    let contentFilterElems;
+    const form = hostElem.querySelector('#program-form');
+
+    let contentElems;
     let indexCurrentContent = 0;
 
     btsOpenDescription.forEach((btn, index) => {
@@ -27,41 +29,46 @@ class programComponent {
       }
     })
 
-    btnsNavigate.forEach((btn, index) => {
-      btn.onclick = () => {
+    radioDateElems.forEach((radio, index) => {
+      radio.onchange = () => {
         indexCurrentContent = index;
 
         contentBlockElems.forEach((contentBlock, i) => {
           if (i === index) {
             contentBlock.classList.add('mod-show');
-            btnsNavigate[i].classList.add('mod-active');
           } else {
             contentBlock.classList.remove('mod-show');
-            btnsNavigate[i].classList.remove('mod-active');
           }
         })
       }
     })
 
-    btnsFilter.forEach((btnFilter, index) => {
-      btnFilter.onclick = () => {
-        contentFilterElems = contentBlockElems[indexCurrentContent].querySelectorAll('.program__content-item');
+    checkboxFilterElems.forEach(checkbox => {
+      checkbox.onchange = () => {
+        const checkedNames = [...form['program-filter']].filter(checkbox => checkbox.checked).map(checkbox => checkbox.value);
 
-        contentFilterElems.forEach((elem, i) => {
-          if (elem.className.includes(btnFilter.value)) {
-            elem.classList.add('mod-show');
-          } else {
-            elem.classList.remove('mod-show');
-          }
-        })
+        contentElems = contentBlockElems[indexCurrentContent].querySelectorAll('.program__content-item');
 
-        btnsFilter.forEach((btn, i) => {
-          if (i === index) {
-            btn.classList.add('mod-active');
-          } else {
-            btn.classList.remove('mod-active');
-          }
-        })
+        if (checkedNames.length) {
+          contentElems.forEach(elem => {
+            let isShowElem = false;
+            checkedNames.forEach(checkedName => {
+              if (elem.className.includes(checkedName)) {
+                isShowElem = true;
+              }
+            })
+
+            if (isShowElem) {
+              elem.classList.remove('mod-hide');
+            } else {
+              elem.classList.add('mod-hide');
+            }
+          });
+        } else {
+          contentElems.forEach(elem => {
+            elem.classList.remove('mod-hide');
+          })
+        }
       }
     })
   }
