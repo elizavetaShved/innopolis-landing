@@ -7,6 +7,7 @@
 .program__bottom-block-wrapper {
   background: #12152a;
   padding-bottom: 106px;
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -16,6 +17,9 @@
   }
 }
 
+.program__bottom-block-wrapper.mod-show {
+  display: block;
+}
 
 .program__head {
   display: flex;
