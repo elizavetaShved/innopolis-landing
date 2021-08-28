@@ -4,17 +4,32 @@
   padding-bottom: 20px;
 }
 
-.program__bottom-block-wrapper {
+.program__bottom-block-container {
   background: #12152a;
   padding-bottom: 106px;
-  display: none;
 }
 
 @media (max-width: 768px) {
-  .program__bottom-block-wrapper {
+  .program__bottom-block-container {
     padding-bottom: 0;
     margin-bottom: 10px;
   }
+}
+
+.program__bottom-blocks {
+  padding: 18px 0 64px 0;
+  background-color: #fff;
+  border-radius: 0 25px 25px 25px;
+}
+
+@media (max-width: 768px) {
+  .program__bottom-blocks {
+    border-radius: 0 25px 0 0;
+  }
+}
+
+.program__bottom-block-wrapper {
+  display: none;
 }
 
 .program__bottom-block-wrapper.mod-show {
@@ -164,10 +179,8 @@
 }
 
 .program__content-wrapper {
-  background-color: #fff;
-  border-radius: 0 25px 25px 25px;
+
   margin: 0;
-  padding: 0;
 }
 
 @media (max-width: 768px) {
@@ -176,12 +189,26 @@
   }
 }
 
+.program__padding-content {
+  padding-left: 62px;
+  padding-right: 62px;
+}
+
+@media (max-width: 1023px) {
+  .program__padding-content {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
 .program__content-item {
-  padding: 68px 62px;
   grid-template-columns: 1fr 8fr 5fr;
   grid-gap: 40px;
   border-bottom: 1px solid #12152A;
   display: grid;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
 }
 
 .program__content-item.mod-hide {
@@ -190,7 +217,6 @@
 
 @media (max-width: 1023px) {
   .program__content-item {
-    padding: 48px 12px;
     grid-gap: 20px;
   }
 }
@@ -199,6 +225,8 @@
   .program__content-item {
     grid-template-columns: 50px 1fr;
     grid-gap: 40px 10px;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 }
 
@@ -208,7 +236,7 @@
   }
 }
 
-.program__content-item:last-child {
+.program__content-item.last-of-type {
   border-bottom: none;
 }
 
@@ -403,5 +431,40 @@
 @media (max-width: 768px) {
   .program__site-width-none {
     padding: 0;
+  }
+}
+
+.program__btns-wrapper {
+  display: flex;
+  margin-top: 28px;
+}
+
+@media (max-width: 426px) {
+  .program__btns-wrapper {
+   flex-direction: column;
+  }
+}
+
+.program__btn-download {
+  display: inline-block !important;
+  margin-left: 18px !important;
+  padding-left: 74px !important;
+  background-image: url('../img/download.svg') !important;
+  background-repeat: no-repeat !important;
+  background-position: top 50% left 40px !important;
+  background-size: 24px 24px !important;
+}
+
+@media (max-width: 768px) {
+  .program__btn-download {
+    padding-left: 50px !important;
+    background-position: top 50% left 20px !important;
+  }
+}
+
+@media (max-width: 426px) {
+  .program__btn-download {
+    margin-left: 0 !important;
+    margin-top: 16px !important;
   }
 }

@@ -308,8 +308,6 @@ $(function () {
 
   submitForm(); // http://hilios.github.io/jQuery.countdown/
 
-  ;
-
   (function () {
     if (!$(".site-countdown").length) {
       return;
