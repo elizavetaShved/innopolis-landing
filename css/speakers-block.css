@@ -1,6 +1,13 @@
 .speakers {
   overflow: hidden;
   background-color: #fff;
+  margin-bottom: 200px;
+}
+
+@media (max-width: 768px) {
+  .speakers {
+    margin-bottom: 70px;
+  }
 }
 
 .speakers__list {
@@ -184,7 +191,7 @@
   z-index: 1;
 }
 
-@media (min-width: 1025px){
+@media (min-width: 1025px) {
   .speakers__item:nth-child(5n+3) .test-wrapper,
   .speakers__item:nth-child(4n+6) .test-wrapper {
     right: 190px;
@@ -305,4 +312,16 @@
   .speakers__item:nth-child(2n+6) .speakers__message-btn {
     transform: scale(-1, 1);
   }
+}
+
+.speakers__btn-show-more-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.speakers__btn-show-more {
+  padding: 14px 64px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 62px;
 }

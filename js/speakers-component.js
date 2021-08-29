@@ -5,6 +5,7 @@ class speakersComponent {
     if (!hostElem) return;
 
     const itemWrapper = hostElem.querySelectorAll('.test-wrapper');
+    const btnShowMore = hostElem.querySelector('.speakers__btn-show-more');
 
     itemWrapper.forEach(elem => {
       elem.onmouseover = () => {
@@ -12,5 +13,9 @@ class speakersComponent {
         elem.parentElement.parentElement.classList.add('mod-hover');
       }
     });
+
+    btnShowMore.onclick = () => {
+      console.log('показать еще 20')
+    }
   }
 }

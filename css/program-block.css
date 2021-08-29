@@ -454,6 +454,10 @@
   background-size: 24px 24px !important;
 }
 
+.program__btn-download:hover {
+  background-image: url('../img/download-hover.svg') !important;
+}
+
 @media (max-width: 768px) {
   .program__btn-download {
     padding-left: 50px !important;

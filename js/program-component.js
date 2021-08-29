@@ -8,7 +8,6 @@ class programComponent {
 
 
   constructor() {
-    console.log(111)
     const hostElem = document.getElementById('program-host');
     if (!hostElem) return;
     const btsOpenDescription = hostElem.querySelectorAll('.program__content-info-btn-show');
