@@ -1,9 +1,12 @@
+.speakers {
+  overflow: hidden;
+}
+
 .speakers__list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 52px 70px;
   grid-auto-flow: dense;
-  overflow: hidden;
 }
 
 @media (max-width: 1024px) {
