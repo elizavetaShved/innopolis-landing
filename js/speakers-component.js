@@ -4,19 +4,13 @@ class speakersComponent {
     const hostElem = document.getElementById('speakers-host');
     if (!hostElem) return;
 
-    const messageBtns = hostElem.querySelectorAll('.speakers__message-btn');
-    const messageContentElems = hostElem.querySelectorAll('.speakers__message-content');
+    const itemWrapper = hostElem.querySelectorAll('.test-wrapper');
 
-    messageBtns.forEach((btn, i) => {
-      btn.onmouseover = () => {
-        messageContentElems[i].classList.add('mod-show');
+    itemWrapper.forEach(elem => {
+      elem.onmouseover = () => {
+        itemWrapper.forEach(e => e.parentElement.parentElement.classList.remove('mod-hover'));
+        elem.parentElement.parentElement.classList.add('mod-hover');
       }
-    })
-
-    messageContentElems.forEach(elem => {
-      elem.onmouseout = () => {
-        elem.classList.remove('mod-show');
-      }
-    })
+    });
   }
 }
