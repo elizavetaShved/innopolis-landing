@@ -86,6 +86,8 @@ class programComponent {
         } else {
           elem.classList.add('mod-hide');
         }
+
+        elem.classList.remove('last-of-type');
       });
     } else {
       this.contentElems.forEach(elem => {
@@ -94,6 +96,7 @@ class programComponent {
       })
     }
 
-    lastElem.classList.add('last-of-type');
+    const showItemsArr = Array.from(this.contentElems).filter(item => !item.className.includes('mod-hide'));
+    showItemsArr[showItemsArr.length - 1].classList.add('last-of-type');
   }
 }
